@@ -1,13 +1,34 @@
 import ProductCard from "@/components/ProductCard";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
-function Products({ Products }) {
+const Products = () => {
+  const [Data, setData] = useState([]);
+
+  const router = useRouter();
+  const id = router.query.id;
+
+  useEffect(() => {
+    fetch(`https://api.escuelajs.co/api/v1/products/${id}`)
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  });
+
+  return (
+    <div>
+      {Data.title} {id}
+    </div>
+  );
+};
+
+/*function Products({ Products }) {
   return <ProductCard Product={products}></ProductCard>;
 }
 
-export const getSercerSideProps = async ({ query }) => {
+export const getServerSideProps = async ({ query }) => {
   let id = query.id;
 
-  const res = await fetch("https://api.escuelajs.co/api/v1/products" + id);
+  const res = await fetch(``);
   const data = await res.json();
 
   return {
@@ -16,5 +37,5 @@ export const getSercerSideProps = async ({ query }) => {
     },
   };
 };
-
+*/
 export default Products;

@@ -40,7 +40,7 @@ const Footer = () => {
         </Link>
       </div>
       <div>
-        <h3 className="asdf">Reach Us</h3>
+        <h3 className="bold">Reach Us</h3>
         <div className="flex-container">
           <span>+(999) 999-99-99</span>
         </div>
@@ -52,9 +52,8 @@ const Footer = () => {
         </Link>
       </div>
       <div>
-        <h3 className="asdf">Follow Us</h3>
+        <h3 className="bold">Follow Us</h3>
         <div className="flex-container"></div>
-
         <Link href="/" className="link-footer">
           <div className="flex-container">
             <Image

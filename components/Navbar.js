@@ -35,13 +35,22 @@ const Navbar = ({ categories }) => {
           ></Image>
         </Link>
       </div>
-      {Data.map((category) => (
-        <div key={category.id}>
-          <a href={`/categories/${category.id}`} className="link">
-            <h3>{category.name}</h3>
-          </a>
-        </div>
-      ))}
+      <ul className="categorul">
+        {Data.map((category, index) => {
+          if (index < 4) {
+            return (
+              <li className="categorli" key={index}>
+                <div key={category.id}>
+                  <Link href={`/categories/${category.id}`} className="link">
+                    <h3>{category.name}</h3>
+                  </Link>
+                </div>
+              </li>
+            );
+          }
+        })}
+      </ul>
+
       <div>
         <SearchBar></SearchBar>
       </div>

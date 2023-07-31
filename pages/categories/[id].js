@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ProductCard from "@/components/ProductCard";
 
 export const getStaticPaths = async () => {
   const res = await fetch("https://api.escuelajs.co/api/v1/categories");
@@ -12,7 +13,9 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const res = await fetch("https://api.escuelajs.co/api/v1/categories" + id);
+  const res = await fetch(
+    `https://api.escuelajs.co/api/v1/categories/${id}/products`
+  );
   const data = await res.json();
 
   return {
@@ -33,18 +36,7 @@ const categories = ({ category }) => {
 
   return (
     <div>
-      {Data.map((product) => {
-        if (product.category.name === category.name) {
-          return (
-            <ProductCard>
-              key={product.id}
-              url={product.images}
-              name={product.title}
-              price={product.price}
-            </ProductCard>
-          );
-        }
-      })}
+      <ProductCard data={category} />
     </div>
   );
 };

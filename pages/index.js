@@ -29,7 +29,7 @@ export default function Home() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <Link href="/" className="slide">
+          <Link href="http://localhost:3000/categories/4" className="slide">
             <Image
               src="/cookware.png"
               alt="cookware"
@@ -39,30 +39,30 @@ export default function Home() {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href="/" className="slide">
+          <Link href="http://localhost:3000/categories/1" className="slide">
             <Image
-              src="/cookware.png"
-              alt="cookware"
+              src="/clothes.png"
+              alt="clothes"
               width={2048}
               height={1365}
             ></Image>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href="/" className="slide">
+          <Link href="http://localhost:3000/categories/2" className="slide">
             <Image
-              src="/cookware.png"
-              alt="cookware"
+              src="/electronicss.png"
+              alt="electronics"
               width={2048}
               height={1365}
             ></Image>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href="/" className="slide">
+          <Link href="http://localhost:3000/categories/3" className="slide">
             <Image
-              src="/cookware.png"
-              alt="cookware"
+              src="/furniture.png"
+              alt="furniture"
               width={2048}
               height={1365}
             ></Image>

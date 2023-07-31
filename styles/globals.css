@@ -36,20 +36,40 @@ nav {
   font-weight: 500;
 }
 
+.categorul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categorli {
+  margin-right: 10px;
+}
+
+.categorli:hover {
+  border-radius: 25px;
+  background-color: whitesmoke;
+  color: #264f4a;
+  transition: 0.12s;
+}
 .logo {
   margin-right: auto;
   padding-left: 15px;
 }
 
 .link {
-  padding: 50px 120px 50px 120px;
-  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 30px 10px 30px;
+  justify-content: space-between;
   align-items: center;
+  display: flex;
 }
 .link:hover {
   border-radius: 25px;
-  text-decoration: underline;
-  transition: 0.15s;
+  transition: 0.12s;
 }
 
 footer {
@@ -67,7 +87,7 @@ footer {
   width: 100%;
 }
 
-.asdf {
+.bold {
   font-weight: 750;
 }
 
@@ -75,7 +95,7 @@ footer {
   display: flex;
   align-items: center;
   padding: 10px 30px, 10px 30px;
-  margin-right: 30px;
+  margin-right: 50px;
   justify-content: center;
   color: black;
   border-radius: 10px;
