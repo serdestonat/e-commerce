@@ -27,22 +27,21 @@ const Products = ({ category }) => {
         width={200}
         height={200}
       ></img>
-      <div className="pl-10">
+      <div className="pl-10 ">
         <h1 className="text-[1000] font-[750]">{category.title}</h1>
         <p>${category.price}</p>
-        <p className="md:container md:mx-auto pt-6">
-          This is the area where product details are written.Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Quisquam, expedita amet
-          quibusdam explicabo ipsam, praesentium voluptates voluptate ipsum
-          iusto in reiciendis est eius cumque, magni aliquid delectus provident
-          libero ut?
-        </p>
+        <p className="md:container md:mx-auto pt-6">{category.description}</p>
         <p className="md:container md:mx-auto pt-6">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
           expedita amet quibusdam explicabo ipsam, praesentium voluptates
           voluptate ipsum iusto in reiciendis est eius cumque, magni aliquid
           delectus provident libero ut?
         </p>
+        <div className="pt-6">
+          <button className="flex md:mx-auto hover:bg-[#264f4a] text-[white] p-2 rounded-[25px] justify-around w-[10]">
+            Add To Basket
+          </button>
+        </div>
       </div>
     </div>
   );

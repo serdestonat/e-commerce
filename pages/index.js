@@ -76,7 +76,9 @@ export default function Home() {
       </div>
 
       <div className="flex justify-evenly p-30">
-        <Image src="/books.jpg" alt="books" width={1360} height={768}></Image>
+        <Link href="http://localhost:3000/categories/5">
+          <Image src="/books.jpg" alt="books" width={1360} height={768}></Image>
+        </Link>
       </div>
 
       <main
