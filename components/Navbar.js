@@ -4,15 +4,6 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import SearchBar from "@/components/SearchBar";
 
-/*export const getStaticProps = async () => {
-  const res = await fetch(`https://api.escuelajs.co/api/v1/categories`);
-  const data = await res.json();
-
-  return {
-    props: { categories: data },
-  };
-};*/
-
 const Navbar = ({ categories }) => {
   const [Data, setData] = useState([]);
 
@@ -53,6 +44,12 @@ const Navbar = ({ categories }) => {
 
       <div>
         <SearchBar></SearchBar>
+      </div>
+
+      <div className="pr-[30px] items-center">
+        <Link href="/">
+          <Image src="/basket.png" alt="basket" width={30} height={30}></Image>
+        </Link>
       </div>
     </nav>
   );

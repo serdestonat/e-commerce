@@ -28,7 +28,7 @@ export default function Home() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
+        <SwiperSlide className="flex justify-between p-10">
           <Link href="http://localhost:3000/categories/4" className="slide">
             <Image
               src="/cookware.png"
@@ -38,7 +38,7 @@ export default function Home() {
             ></Image>
           </Link>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="flex justify-between p-10">
           <Link href="http://localhost:3000/categories/1" className="slide">
             <Image
               src="/clothes.png"
@@ -48,7 +48,7 @@ export default function Home() {
             ></Image>
           </Link>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="flex justify-between p-10">
           <Link href="http://localhost:3000/categories/2" className="slide">
             <Image
               src="/electronicss.png"
@@ -58,7 +58,7 @@ export default function Home() {
             ></Image>
           </Link>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="flex justify-between p-10">
           <Link href="http://localhost:3000/categories/3" className="slide">
             <Image
               src="/furniture.png"
@@ -68,10 +68,19 @@ export default function Home() {
             ></Image>
           </Link>
         </SwiperSlide>
-        ...
       </Swiper>
+
+      <div className="flex justify-between p-20 md:container md:mx-auto ">
+        <Image src="/shoe.jpg" alt="shoe" width={600} height={400}></Image>
+        <Image src="/music.jpg" alt="music" width={600} height={400}></Image>
+      </div>
+
+      <div className="flex justify-evenly p-30">
+        <Image src="/books.jpg" alt="books" width={1360} height={768}></Image>
+      </div>
+
       <main
-        className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+        className={`flex flex-col items-center justify-between p-24 ${inter.className}`}
       >
         <Head>
           <meta

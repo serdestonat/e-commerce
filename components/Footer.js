@@ -54,7 +54,7 @@ const Footer = () => {
       <div>
         <h3 className="bold">Follow Us</h3>
         <div className="flex-container"></div>
-        <Link href="/" className="link-footer">
+        <Link href="https://twitter.com/" className="link-footer">
           <div className="flex-container">
             <Image
               src="/twitter.png"
@@ -64,7 +64,7 @@ const Footer = () => {
             ></Image>
           </div>
         </Link>
-        <Link href="/" className="link-footer">
+        <Link href="https://instagram.com/" className="link-footer">
           <div className="flex-container">
             <Image
               src="/instagram.png"
@@ -74,7 +74,7 @@ const Footer = () => {
             ></Image>
           </div>
         </Link>
-        <Link href="/" className="link-footer">
+        <Link href="https://pinterest.com/" className="link-footer">
           <div className="flex-container">
             <Image
               src="/pinterest.png"
