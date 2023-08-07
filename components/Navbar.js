@@ -47,7 +47,7 @@ const Navbar = ({ categories }) => {
       </div>
 
       <div className="pr-[30px] items-center">
-        <Link href="/">
+        <Link href="/basket">
           <Image src="/basket.png" alt="basket" width={30} height={30}></Image>
         </Link>
       </div>

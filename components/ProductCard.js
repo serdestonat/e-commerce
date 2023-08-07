@@ -1,6 +1,7 @@
 import categories from "@/pages/categories/[id]";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import useShop from "@/context/ShopContext";
 
 const ProductCard = ({ data }) => {
   return (
