@@ -8,8 +8,6 @@ const SearchBar = ({ Data }) => {
   const [query, setQuery] = useState("");
   const [Search, setSearch] = useState("");
 
-  console.log(Data);
-
   /*let newData = Data.filter((item) =>
     item.title.toLowerCase().includes(Router.query.searchText)
   );*/

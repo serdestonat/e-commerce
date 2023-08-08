@@ -9,7 +9,7 @@ export const ShopProvider = ({ children }) => {
 
   const addToBasket = (product) => {
     const updatedBasket = state.products;
-    for (let idx = 0; idx < updatedBasket.lenght; idx++) {
+    for (let idx = 0; idx < updatedBasket.length; idx++) {
       if (updatedBasket[idx].id === product.id) {
         updatedBasket[idx].count += product.count;
         break;
@@ -53,6 +53,7 @@ export const ShopProvider = ({ children }) => {
 
     products.forEach((product) => (total += product.price * product.count));
 
+    Cookies.set("total", total.toString());
     dispatch({
       type: "UPDATE_PRICE",
       payload: {
@@ -63,7 +64,7 @@ export const ShopProvider = ({ children }) => {
 
   const incrementCount = (product) => {
     const newBasket = state.products;
-    for (let idx = 0; idx < newBasket.lenght; idx++) {
+    for (let idx = 0; idx < newBasket.length; idx++) {
       if (newBasket[idx].id === product.id) {
         newBasket[idx].count = product.count;
         break;
@@ -71,6 +72,7 @@ export const ShopProvider = ({ children }) => {
     }
     Cookies.set("products", JSON.stringify(newBasket));
     updatedPrice(newBasket);
+    console.log(newBasket);
 
     dispatch({
       type: "INCREMENT_COUNT",
@@ -82,7 +84,7 @@ export const ShopProvider = ({ children }) => {
 
   const decreaseCount = (product) => {
     const newBasket = state.products;
-    for (let idx = 0; idx < newBasket.lenght; idx++) {
+    for (let idx = 0; idx < newBasket.length; idx++) {
       if (newBasket[idx].id === product.id) {
         newBasket[idx].count = product.count;
         break;
